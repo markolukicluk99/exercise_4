@@ -6,7 +6,13 @@ namespace exercise_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string testovaciText = "Toto je retezec predstavovany nekolika radky,\n"
+                + "ktere jsou od sebe oddeleny znakem LF (Line Feed).\n"
+                + "Je tu i nejaky ten vykricnik! Pro ucely testovani i otaznik?\n"
+                + "Toto je jen zkratka zkr. ale ne konec vety. A toto je\n"
+                + "posledni veta!";
+
+            Console.WriteLine(testovaciText);
         }
     }
 }
