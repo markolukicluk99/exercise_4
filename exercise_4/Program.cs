@@ -16,6 +16,7 @@ namespace exercise_4
             Console.WriteLine(testovaciText);
             Console.WriteLine("Number of words in the String: {0}", text.CountWords());
             Console.WriteLine("Number of rows in the String: {0}", text.CountRows());
+            Console.WriteLine("Number of sentences in the String: {0}", text.CountSentences());
         }   
     }
 }
