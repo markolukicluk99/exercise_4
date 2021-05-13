@@ -11,8 +11,10 @@ namespace exercise_4
                 + "Je tu i nejaky ten vykricnik! Pro ucely testovani i otaznik?\n"
                 + "Toto je jen zkratka zkr. ale ne konec vety. A toto je\n"
                 + "posledni veta!";
+            StringStatistics text = new StringStatistics(testovaciText);
 
             Console.WriteLine(testovaciText);
-        }
+            Console.WriteLine("Number of words in the String: {0}", text.CountWords());
+        }   
     }
 }
