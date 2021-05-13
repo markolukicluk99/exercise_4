@@ -30,5 +30,11 @@ namespace exercise_4
         {
             return words.Length;
         }
+
+        public int CountRows()
+        {
+            // Count the rows, by using the splitter ( We're using '\n' as a reference, to cut the String up. )
+            return initialString.Split('\n').Length;
+        }
     }
 }
