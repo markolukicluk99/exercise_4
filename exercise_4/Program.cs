@@ -20,6 +20,8 @@ namespace exercise_4
             Console.WriteLine("Number of sentences in the String: {0}", text.CountSentences());
             Console.WriteLine("Longest word: {0}", text.LongestWord());
             Console.WriteLine("Shortest word: {0}", text.ShortestWord());
+            Console.WriteLine("Most common word: {0}", text.MostCommonWord());
+
 
             Console.WriteLine();
         }   

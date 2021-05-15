@@ -78,9 +78,43 @@ namespace exercise_4
             }
 
             // Store the result and return it
-            string[] shortwords = words.Where(word => word.Length == lowest).ToArray();
+            string[] shortestword = words.Where(word => word.Length == lowest).ToArray();
 
-            return shortwords;
+            return shortestword;
+        }
+
+        public string[] MostCommonWord()
+        {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+
+            // Iterate through the Dictionary of strings, check for the most commong word, and then save it.
+            foreach (string word in words)
+            {
+                if (dictionary.ContainsKey(word))
+                {
+                    dictionary[word]++;
+                }
+                else
+                {
+                    dictionary.Add(word, 1);
+                }
+            }
+
+            // Count the number of times this word appears in the Dictionary.
+            int occasions = 0;
+            foreach (var item in dictionary)
+            {
+                if (item.Value > occasions)
+                {
+                    occasions = item.Value;
+                }
+            }
+
+            // Store the result into an Array of strings and display it.
+            string[] result = dictionary.Where(word => word.Value == occasions).Select(word => word.Key).ToArray();
+
+            return result;
+
         }
     }
 }
