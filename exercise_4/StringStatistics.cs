@@ -30,6 +30,7 @@ namespace exercise_4
 
         public int CountWords()
         {
+            // Just return the length of words array.
             return words.Length;
         }
 
@@ -47,6 +48,39 @@ namespace exercise_4
             MatchCollection matches = Regex.Matches(initialString, regex);
 
             return matches.Count + 1;
+        }
+
+        public string[] LongestWord()
+        {
+            int length = 0;
+
+            // Scan for words
+            foreach (string word in words)
+            {
+                if (word.Length > length) length = word.Length;
+            }
+
+            // Store the words we found into an array of strings.
+            string[] longwords = words.Where(word => word.Length == length).ToArray();
+
+            return longwords;
+
+        }
+
+        public string[] ShortestWord()
+        {
+            // Use the integrated functionality in C#, so called as MaxValue
+            int lowest = int.MaxValue;
+            // Check for the shortest word in the whole string
+            foreach (string word in words)
+            {
+                if (word.Length < lowest) lowest = word.Length;
+            }
+
+            // Store the result and return it
+            string[] shortwords = words.Where(word => word.Length == lowest).ToArray();
+
+            return shortwords;
         }
     }
 }
