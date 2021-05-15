@@ -21,6 +21,7 @@ namespace exercise_4
             Console.WriteLine("Longest word: {0}", text.LongestWord());
             Console.WriteLine("Shortest word: {0}", text.ShortestWord());
             Console.WriteLine("Most common word: {0}", text.MostCommonWord());
+            Console.WriteLine("Sorted alphabetically: {0}", String.Join(", ", text.AlphabethicSorting()));
 
 
             Console.WriteLine();

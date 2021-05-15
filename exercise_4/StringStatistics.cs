@@ -23,6 +23,7 @@ namespace exercise_4
         {
             // Define the separators, such as whitespaces, commas, dots, etc.
             char[] separators = new char[] { ' ', '.', ',', '?', '!', ';', '\n', '(', ')', '/' };
+
             // Split the words without the empty entries, in our case that could be an empty string, just with whitespaces.
             string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries).Where(word => word != "-").ToArray();
             return words;
@@ -115,6 +116,16 @@ namespace exercise_4
 
             return result;
 
+        }
+        public string[] AlphabethicSorting()
+        {
+            string[] result = words;
+
+            // Simply use the Array.Sort functionallity and return the result.
+
+            Array.Sort(result);
+
+            return result;
         }
     }
 }
